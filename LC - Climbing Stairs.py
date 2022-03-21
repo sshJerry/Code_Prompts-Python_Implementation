@@ -21,6 +21,7 @@ Constraints:
 1 <= n <= 45
 """
 
+#Problem is simply the Fibonacci Sequence
 
 # Iterative Method | Runtime: 22ms    | Memory Usage: 13.4MB
 class Solution(object):

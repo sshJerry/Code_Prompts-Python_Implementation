@@ -20,7 +20,8 @@ Output: [["a"]]
 
 
 """
-Big O: Hide your eyes. It works but it O(n Log n) time.
+Big O: Hide your eyes. It works but it O(n Log n) time. 
+Had to find a roundabout solution for the following test cases ["",""] and ["a","a"]
 """
 
 def isAnagram(s, t):
@@ -60,3 +61,17 @@ class Solution(object):
                     listSet.add(strs[y])
             newList.append(tempList)
         return newList
+
+e = Solution()
+#Test Case 1
+strings = ["eat", "tea", "tan", "ate", "nat", "bat"]
+print(e.groupAnagrams(strings))
+#Test Case 2
+strings = ["",""]
+print(e.groupAnagrams(strings))
+#Test Case 3
+strings = ["","b"]
+print(e.groupAnagrams(strings))
+#Test Case 4
+strings = ["c","c"]
+print(e.groupAnagrams(strings))

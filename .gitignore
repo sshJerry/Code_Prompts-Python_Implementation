@@ -1,0 +1,46 @@
+# Compiled class files and build artifacts
+*.class
+
+# Maven build artifacts
+/target/
+
+# Gradle build artifacts
+.gradle/
+/build/
+
+# IntelliJ IDEA-specific files
+# These are local project settings that shouldn't be committed
+.idea/
+*.iml
+*.iws
+*.ipr
+/out/
+/gen/
+/src/main/resources/
+
+# Eclipse-specific files
+# If you also use Eclipse, you might want to uncomment these
+# .classpath
+# .project
+# .settings/
+# bin/
+
+# Visual Studio Code-specific files
+# If you use VSCode, you might want to uncomment these
+# .vscode/
+
+# Log files
+*.log
+logs/
+
+# Jars and other dependencies
+*.jar
+*.war
+*.ear
+/lib/
+/dist/
+
+# Operating System files
+# Thumbs.db, .DS_Store, etc.
+.DS_Store
+Thumbs.db

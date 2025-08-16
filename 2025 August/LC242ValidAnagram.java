@@ -54,15 +54,15 @@ public class LC242ValidAnagram {
             return false;
 
         Map<Character, Integer> characterCounter = new HashMap<>();
-        for (Character c : s.toCharArray()){
-            if (null == characterCounter.get(c) || characterCounter.get(c) == 0){
+        for (Character c : s.toCharArray()) {
+            if (null == characterCounter.get(c) || characterCounter.get(c) == 0) {
                 characterCounter.put(c, 1);
                 continue;
             }
             characterCounter.put(c, characterCounter.get(c) + 1);
         }
         System.out.println(characterCounter.entrySet());
-        for (Character c : t.toCharArray()){
+        for (Character c : t.toCharArray()) {
             if (characterCounter.get(c) == null || characterCounter.get(c) == 0)
                 return false;
             characterCounter.put(c, characterCounter.get(c) - 1);

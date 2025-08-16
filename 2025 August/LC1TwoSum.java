@@ -68,11 +68,11 @@ public class LC1TwoSum {
          */
 
         Map<Integer, Integer> valueToIndexMap = new HashMap<>();
-        for(int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int delta = target - nums[i];
             if (valueToIndexMap.containsKey(delta))
-                return new int[] {valueToIndexMap.get(delta), i};
-            valueToIndexMap.put(nums[i],i);
+                return new int[]{valueToIndexMap.get(delta), i};
+            valueToIndexMap.put(nums[i], i);
         }
         return new int[0];
 

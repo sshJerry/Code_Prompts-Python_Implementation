@@ -38,7 +38,7 @@ import java.util.Set;
 public class LC217ContainsDuplicate1 {
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> storedNums = new HashSet<>();
-        for (int num : nums){
+        for (int num : nums) {
             if (storedNums.contains(num))
                 return true;
             storedNums.add(num);

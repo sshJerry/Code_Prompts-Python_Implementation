@@ -59,13 +59,13 @@ public class LC242ValidAnagram1 {
 
         if (s.length() != t.length())
             return false;
-        for(Character sChar : s.toCharArray()) {
-            characterToCountMap.put(sChar, characterToCountMap.getOrDefault(sChar, 0) +1);
+        for (Character sChar : s.toCharArray()) {
+            characterToCountMap.put(sChar, characterToCountMap.getOrDefault(sChar, 0) + 1);
         }
 
-        for(Character tChar : t.toCharArray()) {
-            if (characterToCountMap.containsKey(tChar) && characterToCountMap.get(tChar) >0){
-                characterToCountMap.put(tChar, characterToCountMap.get(tChar)-1);
+        for (Character tChar : t.toCharArray()) {
+            if (characterToCountMap.containsKey(tChar) && characterToCountMap.get(tChar) > 0) {
+                characterToCountMap.put(tChar, characterToCountMap.get(tChar) - 1);
                 continue;
             }
             return false;

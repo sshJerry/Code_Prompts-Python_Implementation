@@ -49,16 +49,16 @@ We can do better by using a Hash Map to check if the delta is currently in the m
 the value and the index in the map and continue iterating
  */
 public class LC1TwoSum1 {
-    public int[] twoSum(int[] nums, int target){
+    public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> currentValueToIndex = new HashMap<>();
-        for(int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int delta = target - nums[i];
-            if(currentValueToIndex.containsKey(delta)) {
-                return new int[] {currentValueToIndex.get(delta), i};
+            if (currentValueToIndex.containsKey(delta)) {
+                return new int[]{currentValueToIndex.get(delta), i};
             }
             currentValueToIndex.put(nums[i], i);
         }
-        return new int[] {};
+        return new int[]{};
     }
 }
 // TC O(n), SC O(n)

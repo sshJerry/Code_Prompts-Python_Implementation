@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/***
+/*
  * Given an integer array nums, return true if any value appears at least twice in the array,
  * and return false if every element is distinct.
 
@@ -59,7 +59,7 @@ public class LC217ContainsDuplicate {
     }
 }
 
-/***
+/*
  * Notes: O(n) for Time and Space, in the worse case. Frequency Counting works, just use HashSet
  * instead of Hashmap
  */

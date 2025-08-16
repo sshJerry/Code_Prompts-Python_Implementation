@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/***
+/*
  *Given two strings s and t, return true if t is an anagram of s, and false otherwise.
  *
  * Example 1:
@@ -33,7 +33,7 @@ public class LC242ValidAnagram {
         // First check if s == t and return true
         // Second check if s.length() != t,length() and return false
 
-        /***
+        /*
          * What I'm thinking is iterating through the first string (s) and at every character,
          * evaluating that character against string t using Strings replaceFirst() or StringBuilders deleteCharAt().
          * If by the time we reach end of string s and there's still remaining characters in String t
@@ -72,6 +72,6 @@ public class LC242ValidAnagram {
     }
 }
 
-/***
+/*
  * Notes: O(n * m) so O(n). Improvement that can be made is using getOrDefault in the future.
  */

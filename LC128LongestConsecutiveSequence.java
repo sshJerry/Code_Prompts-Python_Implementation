@@ -39,24 +39,24 @@ import java.util.Set;
 
 public class LC128LongestConsecutiveSequence {
     public int longestConsecutive(int[] nums) {
+        Set<Integer> numsSet = new HashSet<>();
+        int longestSequence = 1;
         if (nums.length <= 1)
             return nums.length;
-        int maxSequence = 0;
-        Set<Integer> seen = new HashSet<>();
-        for (int num : nums) {
-            seen.add(num);
+        for (int num : nums){
+            numsSet.add(num);
         }
-        for (int num : seen) {
-            if (!seen.contains(num - 1)) {
-                int currentNum = num;
-                int currentLength = 1;
-                while (seen.contains(currentNum + 1)) {
-                    currentNum++;
-                    currentLength++;
+        for (int num : numsSet) {
+            if (!numsSet.contains(num - 1)){
+                int currentLongest = 1;
+                int currentNumber = num;
+                while (numsSet.contains(currentNumber + 1)){
+                    currentLongest++;
+                    currentNumber++;
                 }
-                maxSequence = Integer.max(currentLength, maxSequence);
+                longestSequence = Integer.max(longestSequence, currentLongest);
             }
         }
-        return maxSequence;
+        return longestSequence;
     }
 }
